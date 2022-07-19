@@ -5,7 +5,7 @@ This sample code shows how to integrate PallyCon Multi-DRM with [react-native-vi
  - Android: MPEG-DASH content protected by Widevine DRM
  - iOS: HLS content protected by FairPlay Streaming DRM
 
-> If you want download/offline support, you may need to implement the feature on your own or use our `Multi-DRM Client SDK for React Native' product which is under development.
+> If you want download/offline scenario support, you may need to implement the feature on your own or use our `Multi-DRM Client SDK for React Native' product which is under development.
 
 ## Requirements
 
@@ -119,18 +119,13 @@ You can test the sample on a Widevine-supported Android device using the command
 
 Apply FPS DRM integration on `App.js` file in your project by referring to this sample code. You may need to replace the below values if you want to test your own FairPlay content.
 
-  - FPS content URL : Input your HLS m3u8 URL in `source > uri` parameter
-  - License server URL : Input our DRM license server URL (`https://license-global.pallycon.com/ri/licenseManager.do`)
-  - DRM custom data : Input PallyCon DRM license token string as `pallycon-customdata-v2` custom header.
-
+  - FPS content URL: Input your HLS m3u8 URL in `source > uri` parameter
+  - License server URL: Input our DRM license server URL (`https://license-global.pallycon.com/ri/licenseManager.do`)
+  - Certificate URL: Input your FPS cert URL with your site ID (`https://license.pallycon.com/ri/fpsKeyManager.do?siteId=Your Site ID`)
+  - DRM custom data: Input PallyCon DRM license token string as `pallycon-customdata-v2` custom header.
 
 ### App.js code example
-
-- Apple Certificate URL을 입력해야 합니다. URL 마지막에 `Site ID`를 입력하세요.
-    - `certificateUrl: 'https://license.pallycon.com/ri/fpsKeyManager.do?siteId=Your Site ID',`
-    - `base64Certificate: true,`
-- 나머지는 `Widevine` 처럼 FPS 콘텐츠/라이선스 서버 URL/라이선스 요청 정보(Token)을 입력해야 합니다.
-  
+ 
     ```jsx
     import React from "react";
     import { StyleSheet, View } from "react-native";
