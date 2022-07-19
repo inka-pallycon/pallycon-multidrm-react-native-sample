@@ -1,4 +1,4 @@
-# PallyCon Multi-DRM integration sample for React-Native-Video
+# PallyCon Multi-DRM sample for React-Native-Video
 
 This sample code shows how to integrate PallyCon Multi-DRM with [react-native-video](https://github.com/react-native-video/react-native-video) project.
 
