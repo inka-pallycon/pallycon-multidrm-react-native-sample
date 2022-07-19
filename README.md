@@ -1,18 +1,18 @@
 # PallyCon Multi-DRM sample for React-Native-Video
 
-This sample code shows how to integrate PallyCon Multi-DRM with [react-native-video](https://github.com/react-native-video/react-native-video) project. It supports streaming playback of DRM-protected contents as below.
+This sample code shows how to integrate PallyCon Multi-DRM with [react-native-video](https://github.com/react-native-video/react-native-video) project. It supports streaming playback of DRM-protected contents on React Native based Android and iOS applications.
 
  - Android: MPEG-DASH content protected by Widevine DRM
  - iOS: HLS content protected by FairPlay Streaming DRM
 
-> If you want download/offline scenario support, you may need to implement the feature on your own or use our `Multi-DRM Client SDK for React Native' product which is under development.
+> If you want download/offline scenario support, you may need to implement the feature on your own or use our `Multi-DRM Client SDK for React Native` product which is under development.
 
 ## Requirements
 
 This sample requires components and environments as below:
 
- - React Native 0.68.2 or higher recommended (newer version can have problems on Apple silicon such as M1 chipset)
- - react-native-video 6.0.0 or higher
+ - React Native 0.68.2 or later
+ - react-native-video 6.0.0 or later
 
 > On Apple silicon environment such as M1, latest version of React Native can cause issues. So it is recommended to use 0.68.2 on those development environment.
 
@@ -198,3 +198,4 @@ Install dependency libraries of the project and open the generated Xcode workspa
 - [PallyCon Multi-DRM License Token Guide](https://pallycon.com/docs/en/multidrm/license/license-token/)
 - [FairPlay Certificate Registration Tutorial](https://pallycon.com/docs/en/multidrm/license/fps-cert-tutorial/)
 - [License Token Generation on DevConsole](https://sample.pallycon.com/dev/devconsole/customData.do?lang=en#create-token)
+- [react-native-video Document](https://github.com/react-native-video/react-native-video/blob/master/API.md)
