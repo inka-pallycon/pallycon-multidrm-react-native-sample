@@ -10,10 +10,10 @@ const VideoPlayer = () => {
         uri: 'https://contents.pallycon.com/DEMO/app/big_buck_bunny/dash/stream.mpd' 
       }}
       style={styles.fullScreen}
-      paused={false} // 재생/중지 여부
-      resizeMode={"cover"} // 프레임이 비디오 크기와 일치하지 않을 때 비디오 크기를 조정하는 방법을 결정합니다. cover : 비디오의 크기를 유지하면서 최대한 맞게
-      onLoad={e => console.log(e)} // 미디어가 로드되고 재생할 준비가 되면 호출되는 콜백 함수입니다.
-      repeat={true} // video가 끝나면 다시 재생할 지 여부
+      paused={false} 
+      resizeMode={"cover"} 
+      onLoad={e => console.log(e)} 
+      repeat={true} 
       onAnimatedValueUpdate={() => {}}
       drm={{
         type: DRMType.WIDEVINE,
@@ -59,10 +59,10 @@ export default VideoPlayer
 //         uri: "https://FPS.DRM.ContentURL.m3u8" 
 //       }}
 //       style={styles.fullScreen}
-//       paused={false} // 재생/중지 여부
-//       resizeMode={"cover"} // 프레임이 비디오 크기와 일치하지 않을 때 비디오 크기를 조정하는 방법을 결정합니다. cover : 비디오의 크기를 유지하면서 최대한 맞게
-//       onLoad={e => console.log(e)} // 미디어가 로드되고 재생할 준비가 되면 호출되는 콜백 함수입니다.
-//       repeat={true} // video가 끝나면 다시 재생할 지 여부
+//       paused={false} 
+//       resizeMode={"cover"} 
+//       onLoad={e => console.log(e)} 
+//       repeat={true} 
 //       onAnimatedValueUpdate={() => {}}
 //       drm={{
 //         type: DRMType.FAIRPLAY,
