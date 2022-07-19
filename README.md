@@ -1,8 +1,6 @@
 # PallyCon Multi-DRM sample for React-Native-Video
 
-This sample code shows how to integrate PallyCon Multi-DRM with [react-native-video](https://github.com/react-native-video/react-native-video) project.
-
-It supports streaming playback of DRM-protected contents as below.
+This sample code shows how to integrate PallyCon Multi-DRM with [react-native-video](https://github.com/react-native-video/react-native-video) project. It supports streaming playback of DRM-protected contents as below.
 
  - Android: MPEG-DASH content protected by Widevine DRM
  - iOS: HLS content protected by FairPlay Streaming DRM
