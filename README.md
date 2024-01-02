@@ -19,7 +19,7 @@ This sample requires components and environments as below:
 ## Creating React Native project
 
 After setting up React Native development environment, create a project by running the command below:
-  
+
   ```bash
   # for systems other than Apple silicon
   $ react-native init ProjectName
@@ -48,7 +48,7 @@ Apply Widevine DRM integration on `App.js` file in your project by referring to 
   - DRM custom data : Input PallyCon DRM license token string as `pallycon-customdata-v2` custom header.
 
 ### App.js code example
-  
+
     ```jsx
     import React from "react";
     import { StyleSheet, View } from "react-native";
@@ -125,7 +125,7 @@ Apply FPS DRM integration on `App.js` file in your project by referring to this 
   - DRM custom data: Input PallyCon DRM license token string as `pallycon-customdata-v2` custom header.
 
 ### App.js code example
- 
+
     ```jsx
     import React from "react";
     import { StyleSheet, View } from "react-native";
@@ -191,6 +191,28 @@ Install dependency libraries of the project and open the generated Xcode workspa
   ```
 
 > To test the playback of FPS content, you need an iOS/iPadOS device or Apple silicon macOS device. You cannot test it on an iOS simulator.
+
+
+
+### Fix react-native-video
+
+Modify the `RCTVideo.swift` file in the iOS folder as shown below.
+```swift
+// RCTVideo.swift
+// On line 345, change self.onGetLicense to nil to get the license.
+if self._drm != nil || self._localSourceEncryptionKeyScheme != nil {
+  self._resouceLoaderDelegate = RCTResourceLoaderDelegate(
+    asset: asset,
+    drm: self._drm,
+    localSourceEncryptionKeyScheme: self._localSourceEncryptionKeyScheme,
+    onVideoError: self.onVideoError,
+    onGetLicense: nil, // <<-- self.onGetLicense -> nil
+    reactTag: self.reactTag
+  )
+}
+```
+
+
 
 ## Useful links
 
